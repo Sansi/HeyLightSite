@@ -37,18 +37,18 @@
         }
 
         // 根据不同的终端，跳转到不同的地址
-        var theUrl = 'stellar-wifi.apk';
-        var iPadUrl = 'https://itunes.apple.com/us/app/stellar-wi-fi/id965055647?ls=1&mt=8';
-
+        var theUrl = 'hey-light.apk';
+        var itunesUrl = 'https://itunes.apple.com/us/app/hey-light/id1247062780?mt=8';
+        var googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.sansi.heylight';
         if(Terminal.platform.android){
             if (currentLang == 'zh-CN') {
                 //alert('zh-CN');
             }else{
                 //alert('en');
-                theUrl = 'https://play.google.com/store/apps/details?id=com.sansi.stellarWiFi';
+                theUrl = googlePlayUrl;
             };
         }else if(Terminal.platform.iPhone || Terminal.platform.ios || Terminal.platform.iPad || Terminal.platform.webKit){
-            theUrl = 'https://itunes.apple.com/us/app/stellar-wi-fi/id965055647?ls=1&mt=8';
+            theUrl = itunesUrl;
         }/*else if(Terminal.platform.iPad){
             // 还可以通过language，区分开多国语言版
             switch(Terminal.language){
